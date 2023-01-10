@@ -22,7 +22,7 @@ Since the value is encrypted, we can't search for the exact amount of gold we ar
 Therefor we will be using Cheat Engines "Changed Value" & "Unchanged Value" scanning option to find the encrypted gold address.<br><br>
 
 The theorie is to first scan for an "Unknown initial value". Then to scan for "Changed Value" when the amout of Gold you are holding has Changed and for "Unchanged Value" when the Value hasn't changed. Repeat this step till you are down to a few addresses.<br>
-After that we will use Cheat Engines "Find out what access this address" function to find the function which accesses/works with the encrypted Gold Value. This should lead us to the decryption function.<br>
+After that we will use Cheat Engines "Find out what writes to this address" function to find the function which writes to the memory address where the encrypted value is stored. This should lead us to the encryption function.<br>
 By placing a breakpoint at the decryption function, we can than step through the code until we find a Register holding our decrypted gold value. To achive our goal we will be placing a hook at the place where our value is decrypted, storing it into our own allocated memory & printing it into a C/C++ console.
 
 # Skills acquired
@@ -39,3 +39,5 @@ By placing a breakpoint at the decryption function, we can than step through the
 <img src="https://user-images.githubusercontent.com/108685788/211550929-5e3ae24f-2563-4349-a5b0-9a7ff6f572a0.gif" Width="50%" Height="50%"/>
 4. Trigger different game functions like attacking, moving without changing your gold. Search for "Unchanged Value".
 <img src="https://user-images.githubusercontent.com/108685788/211551713-dc4b87f9-28fc-4b43-82c5-27665402d760.gif" Width="50%" Height="50%"/>
+<br>
+Keep repeating steps 3 & 4 until you are left with only a few addresses.
