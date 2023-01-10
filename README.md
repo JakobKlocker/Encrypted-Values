@@ -7,7 +7,7 @@ This makes it harder to find this information, since we can't just search the me
 Since the game needs the actual values to do arithmetic and logic operations on it these values will have to be decrypted, worked with and encrypted again. In this post I will explain how to find the decrypted values, using the gold value as an example.
 
 # Approaches
-There are two common approaches, one is to reverse the encryption/decryption function and apply it onto the encrypted value.<br>
+There are two common approaches, one is to reverse the encryption/decryption function and use that to decrypt the encrypted value which is stored on the heap.<br>
 The other one is to hook the place where the game is working with the decrypted values and edit/copy the content there.<br>
 We will be doing the second approach today, the first approach will be covered in a later post.
 
