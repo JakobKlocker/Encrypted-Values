@@ -29,8 +29,13 @@ By placing a breakpoint at the decryption function, we can than step through the
 -Basic understanding of memory scanning<br>
 -Dynamic Analysis
 
-# Pratical
+# Pratical - Finding Encrypted gold value
 1. first open Cheat Engine and attach it to the Game.
 <img src="https://user-images.githubusercontent.com/108685788/211548714-81dc412d-e006-43bc-a07d-553aa54c5ddb.gif" Width="50%" Height="50%"/>
 <br>
 2. Search for "Unknown initial value".
+<img src="https://user-images.githubusercontent.com/108685788/211549848-cab11583-8072-4d57-89e8-7b041a4520dc.gif" Width="50%" Height="50%"/>
+3. Ingame change your gold by dropping or gaining gold and search for "Changed Value".
+<img src="https://user-images.githubusercontent.com/108685788/211550929-5e3ae24f-2563-4349-a5b0-9a7ff6f572a0.gif" Width="50%" Height="50%"/>
+4. Trigger different game functions like attacking, moving without changing your gold. Search for "Unchanged Value".
+<img src="https://user-images.githubusercontent.com/108685788/211551713-dc4b87f9-28fc-4b43-82c5-27665402d760.gif" Width="50%" Height="50%"/>
