@@ -25,6 +25,10 @@ The theory is to first scan for an "Unknown initial value". Then to scan for "Ch
 After that we will use Cheat Engines "Find out what writes to this address" function to find the function which writes to the memory address where the encrypted value is stored. This should lead us to the encryption function.<br>
 By tracing back the stack we can find out which function called the encryption function and fetch the real gold value before it's encrypted. To achieve our goal we will be placing a hook at the place where our value is decrypted, storing it into our own allocated memory & printing it into a C/C++ console.
 
+# Skills requiered
+-Basic x86 ASM<br>
+-Basic Debugging experience
+
 # Skills acquired
 -Basic understanding of memory scanning<br>
 -Dynamic Analysis
