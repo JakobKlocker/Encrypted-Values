@@ -2,8 +2,8 @@
 In this post I will explain/guide you how to find and hook encrypted values in games.
 
 # Intro
-Most games these days will encrypt important values such as player & enemy information to make it harder to find the addresses and edit/work with it's content.<br>
-This makes it harder for us to find the encrypted value, since we can't just search the memory for an exact value without knowing the encryption.<br>
+Most games these days will encrypt important values such as player & enemy information.<br>
+This makes it harder for people to find these informations, since we can't just search the memory for an exact value without knowing the encryption.<br>
 Since the game needs the actual values to do arithmetic and logic operations on it these values will have to be decrypted, worked with and encrypted again.
 
 # Approaches
