@@ -40,7 +40,7 @@ By tracing back the stack we can find out which function called the encryption f
 <br>
 2. Search for "Unknown initial value" with value type 4 Bytes. The value type may vary depending on which type is holding the gold, if you can't find any decent result with 4 Bytes try 2 Bytes (short) or 8 Bytes (long). Most games will use 4 Bytes though. This will search the entire memory of the process attached for a specific type.
 <img src="https://user-images.githubusercontent.com/108685788/211549848-cab11583-8072-4d57-89e8-7b041a4520dc.gif" Width="50%" Height="50%"/>
-3. In game change your gold by dropping or gaining gold and search for "Changed Value". Since we do not know how the encryption works we can't search for "increased" or "decreased value". This will filter out all values which haven't change. 
+3. In game change your gold by dropping or gaining gold and search for "Changed Value". Since we do not know how the encryption works we can't search for "increased" or "decreased value". This will filter out all values which haven't changed. 
 <img src="https://user-images.githubusercontent.com/108685788/211550929-5e3ae24f-2563-4349-a5b0-9a7ff6f572a0.gif" Width="50%" Height="50%"/>
 4. Trigger different game functions like attacking, moving without changing your gold. Search for "Unchanged Value". This will filter out all values which have been changed. It is a good idea to trigger as many in game functions as possible to trigger a change to uninteresting values.
 <img src="https://user-images.githubusercontent.com/108685788/211551713-dc4b87f9-28fc-4b43-82c5-27665402d760.gif" Width="50%" Height="50%"/>
