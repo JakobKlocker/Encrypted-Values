@@ -46,10 +46,10 @@ In my case I'm left with four addresses which are all 4 bytes apart. This could 
 
 # Pratical - Finding Decrypted gold value
 As explained above the next step is to find out where the decrypted value is written to the memory address we found. To do this, right click the memory address and "find out what writes to this address". By doing this a window will pop up which keeps track at which location the content of our address is modified. If you now change your gold value it should show at which memory address & with which assembly instruction the value was changed.<br>
-<img width="212" alt="writesToAddr" src="https://user-images.githubusercontent.com/108685788/211561466-5af8af2c-cad8-4f0c-bd40-1ce37b8a9b57.png">
+<img width="212" alt="writesToAddr" src="https://user-images.githubusercontent.com/108685788/211561466-5af8af2c-cad8-4f0c-bd40-1ce37b8a9b57.png"><br>
 We now found the function which encrypts our value. Most encryption functions have xor, shl/shr assembly instructions in them which is a good indicator to know you're at the correct place.<br>
 I decided to look at that function in IDA to get an overview of how many functions call that encryption function and to get an idea of how the encryption looks like.<br>
-<img width="442" alt="callsToEncryption" src="https://user-images.githubusercontent.com/108685788/211563033-1ca423c0-353b-4291-a3fa-aa02c0839d77.png">
-The encryption is called at 1123 places, meaning it won't just be used to encrypt our gold value.<br>
-<img width="290" alt="encryptionFunction" src="https://user-images.githubusercontent.com/108685788/211564083-f42159f9-7d0e-4d7a-af61-cccb113de52c.png">
+<img width="442" alt="callsToEncryption" src="https://user-images.githubusercontent.com/108685788/211563033-1ca423c0-353b-4291-a3fa-aa02c0839d77.png"><br>
+The encryption is called at 1123 places, meaning it won't just be used to encrypt our gold value. This tells us it won't be as easy as setting a breakpoint and tracing back the stack when changing the gold value, since the encryption will most likely be called by another function before we are able to change our gold value.<br>
+<img width="290" alt="encryptionFunction" src="https://user-images.githubusercontent.com/108685788/211564083-f42159f9-7d0e-4d7a-af61-cccb113de52c.png"><br>
 Looking at the encryption function we see that it creates a random value, stores it at the address of the second argument. It uses the random value to perform some arithmetic on the first argument(which will most likely be our decrypted value) which is stored at the second arguments address + 4(most likely a strucutre). The function returns some kind of checksum, which is created with some arithmetic including the encrypted value, the random value and 0xBAADF00D.
