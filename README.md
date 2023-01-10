@@ -73,5 +73,5 @@ In my case the register EAX and ECX both hold my current gold value in hex. The 
 <img width="202" alt="gold" src="https://user-images.githubusercontent.com/108685788/211589934-423d47c5-25d8-4e68-902b-c77ac8d4648c.png">
 
 # Detour
-Since there are lots of tutorials about detouring online I will not cover that topic today. Simply write a detour at the address where the gold value is stored, mov it into your own allocated memory and print it. Inline Assembly can be used for this.
+Since there are lots of tutorials about detouring online I will not cover that topic today. Simply write a detour at the address where the gold value is stored, mov it into your own allocated memory and print it. Inline Assembly can be used for this.<br>
 <img src="https://user-images.githubusercontent.com/108685788/211629149-e41d9fb1-e1bf-4bd2-b9a5-c1e15a89d299.gif" Width="50%" Height="50%"/><br>
