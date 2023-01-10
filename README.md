@@ -26,7 +26,9 @@ After that we will use Cheat Engines "Find out what access this address" functio
 By placing a breakpoint at the decryption function, we can than step through the code until we find a Register holding our decrypted gold value. To achive our goal we will be placing a hook at the place where our value is decrypted, storing it into our own allocated memory & printing it into a C/C++ console.
 
 # Skills acquired
--Basic understanding of memory scanning
+-Basic understanding of memory scanning<br>
 -Dynamic Analysis
 
-# 
+# Pratical
+1. first open Cheat Engine and attach it to the Game.
+<img src="https://user-images.githubusercontent.com/108685788/211548714-81dc412d-e006-43bc-a07d-553aa54c5ddb.gif" Width="50%" Height="50%"/>
