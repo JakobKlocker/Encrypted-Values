@@ -49,7 +49,7 @@ Keep repeating steps 3 & 4 until you are left with only a few addresses.
 In my case I'm left with four addresses which are all 4 bytes apart. This could lead to the assumption that we found a structure which contains the encrypted gold value and some additional information used to decrypt it.
 
 # Practical - Finding Encryption Function
-The next step is to find out where the encrypted value is written to the address we found. To do this, right click the memory address and "find out what writes to this address". By doing this a window will pop up which keeps track at which location the content of our address is modified. If you now change your gold value it should show at which memory address & with which assembly instruction the value was changed.<br>
+The next step is to find out where the encrypted value is written to the address we found. To do this, right click the memory address and "find out what writes to this address". By doing this a window will pop up which keeps track at which location the content of our address is modified. If you now change your gold value it should display which assembly instruction, including the address, is changing the value.<br>
 <img width="212" alt="writesToAddr" src="https://user-images.githubusercontent.com/108685788/211561466-5af8af2c-cad8-4f0c-bd40-1ce37b8a9b57.png"><br>
 We now found the function which encrypts our value. Most encryption functions have xor, shl/shr assembly instructions in them which is a good indicator to know you're at the correct place.<br>
 I decided to look at that function in IDA to get an overview of how many functions call that encryption function and to get an idea of how the encryption looks like.<br>
