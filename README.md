@@ -17,10 +17,10 @@ https://en.wikipedia.org/wiki/Cheat_Engine<br>
 https://en.wikipedia.org/wiki/Interactive_Disassembler
 
 # Theorie
-In todays post we will be looking for the gold value and display it in a C consol.<br>
+In todays post we will be looking for the gold value and display it in a C/C++ consol.<br>
 Since the value is encrypted, we can't search for the exact amount of gold we are holding since that value is never stored on the heap.<br>
 Therefor we will be using Cheat Engines "Changed Value" & "Unchanged Value" scanning option to find the encrypted gold address.<br><br>
 
 The theorie is to first scan for an "Unknown initial value". Then to scan for "Changed Value" when the amout of Gold you are holding has Changed and for "Unchanged Value" when the Value hasn't changed. Repeat this step till you are down to a few addresses.<br>
 After that we will use Cheat Engines "Find out what access this address" function to find the function which accesses/works with the encrypted Gold Value. This should lead us to the decryption function.<br>
-By placing a breakpoint at the decryption function, we can than step through the code until we find a Register holding our decrypted gold value. To achive our goal we will be placing a hook at the place where our value is decrypted, storing it into our own allocated memory & printing it into a C console.
+By placing a breakpoint at the decryption function, we can than step through the code until we find a Register holding our decrypted gold value. To achive our goal we will be placing a hook at the place where our value is decrypted, storing it into our own allocated memory & printing it into a C/C++ console.
