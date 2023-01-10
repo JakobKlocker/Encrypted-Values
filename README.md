@@ -23,7 +23,7 @@ Therefore we will be using Cheat Engines "Changed Value" & "Unchanged Value" sca
 
 The theory is to first scan for an "Unknown initial value". Then to scan for "Changed Value" when the amount of Gold you are holding has Changed and for "Unchanged Value" when the Value hasn't changed. Repeat this step till you are down to a few addresses.<br>
 After that we will use Cheat Engines "Find out what writes to this address" function to find the function which writes to the memory address where the encrypted value is stored. This should lead us to the encryption function.<br>
-By placing a breakpoint at the decryption function, we can than step through the code until we find a Register holding our decrypted gold value. To achieve our goal we will be placing a hook at the place where our value is decrypted, storing it into our own allocated memory & printing it into a C/C++ console.
+By tracing back the stack we can find out which function called the encryption function and fetch the decrypted gold value before it's encrypted. To achieve our goal we will be placing a hook at the place where our value is decrypted, storing it into our own allocated memory & printing it into a C/C++ console.
 
 # Skills acquired
 -Basic understanding of memory scanning<br>
