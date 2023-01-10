@@ -1,5 +1,5 @@
 # Finding &amp; Hooking Encrypted Values
-In this post I will explain/guide you how to find and hook encrypted values in games.
+In this post I will explain/guide you how to find encrypted values in games.
 
 # Intro
 Most games these days will encrypt important values such as player & enemy information.<br>
