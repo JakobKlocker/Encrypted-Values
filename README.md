@@ -32,3 +32,5 @@ By placing a breakpoint at the decryption function, we can than step through the
 # Pratical
 1. first open Cheat Engine and attach it to the Game.
 <img src="https://user-images.githubusercontent.com/108685788/211548714-81dc412d-e006-43bc-a07d-553aa54c5ddb.gif" Width="50%" Height="50%"/>
+<br>
+2. Search for "Unknown initial value".
