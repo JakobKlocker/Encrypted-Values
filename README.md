@@ -71,3 +71,7 @@ In my case the breakpoint should hit if EDI equals 0x559A9131. It is possible th
 <img src="https://user-images.githubusercontent.com/108685788/211588878-11ab4a15-df0f-4cad-bce6-90d9ea4589bb.gif" Width="50%" Height="50%"/><br>
 In my case the register EAX and ECX both hold my current gold value in hex. The location your gold is stored may differ depending on the game. <br>
 <img width="202" alt="gold" src="https://user-images.githubusercontent.com/108685788/211589934-423d47c5-25d8-4e68-902b-c77ac8d4648c.png">
+
+# Detour
+Since there are lots of tutorials about detouring online I will not cover that topic today. Simply write a detour at the address where the gold value is stored, mov it into your own allocated memory and print it. Inline Assembly can be used for this.
+<img src="https://user-images.githubusercontent.com/108685788/211629149-e41d9fb1-e1bf-4bd2-b9a5-c1e15a89d299.gif" Width="50%" Height="50%"/><br>
