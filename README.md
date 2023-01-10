@@ -10,7 +10,7 @@ Since the game needs the actual values to do arithmetic and logic operations on 
 There are two common approaches, one is to reverse the encryption/decryption function and apply it onto the encrypted value.
 The other one is to hook the place where the game is working with the decrypted values and edit/copy the content there.
 We will be doing the second approach today, the first approach will be covered in a later post.
-
+\n
 # Tools
 We'll be using mainly Cheat Engine, for memory scanning & tracing, and IDA, to get a better understanding of the function.
 https://en.wikipedia.org/wiki/Cheat_Engine
