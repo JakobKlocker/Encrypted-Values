@@ -12,7 +12,7 @@ The other one is to hook the place where the game is working with the decrypted 
 We will be doing the second approach today, the first approach will be covered in a later post.
 
 # Tools
-We'll be using mainly Cheat Engine, for memory scanning & tracing, and IDA to get a better understanding of the functions we're analysing.<br>
+We'll be using mainly Cheat Engine for memory scanning & tracing and IDA to get a better understanding of the functions we're analysing.<br>
 https://en.wikipedia.org/wiki/Cheat_Engine<br>
 https://en.wikipedia.org/wiki/Interactive_Disassembler
 
