@@ -4,7 +4,7 @@ In this post I will explain/guide you how to find and hook encrypted values in g
 # Intro
 Most games these days will encrypt important values such as player & enemy information.<br>
 This makes it harder to find this information, since we can't just search the memory for an exact value without knowing the encryption.<br>
-Since the game needs the actual values to do arithmetic and logic operations on it these values will have to be decrypted, worked with and encrypted again.
+Since the game needs the actual values to do arithmetic and logic operations on it these values will have to be decrypted, worked with and encrypted again. In this post I will explain how to find the decrypted values, using the gold value as an example.
 
 # Approaches
 There are two common approaches, one is to reverse the encryption/decryption function and apply it onto the encrypted value.<br>
