@@ -34,7 +34,7 @@ By placing a breakpoint at the decryption function, we can than step through the
 1. first open Cheat Engine and attach it to the Game.
 <img src="https://user-images.githubusercontent.com/108685788/211548714-81dc412d-e006-43bc-a07d-553aa54c5ddb.gif" Width="50%" Height="50%"/>
 <br>
-2. Search for "Unknown initial value" with value type 4 Bytes. The value type may vary depending on which type is holding the gold, if you can't find any decent result with 4 Bytes try 2 Bytes (short) or 8 Bytes (long). Most games will use 4 Bytes thought. This will search the entire memory of the process attached for a specific type.
+2. Search for "Unknown initial value" with value type 4 Bytes. The value type may vary depending on which type is holding the gold, if you can't find any decent result with 4 Bytes try 2 Bytes (short) or 8 Bytes (long). Most games will use 4 Bytes though. This will search the entire memory of the process attached for a specific type.
 <img src="https://user-images.githubusercontent.com/108685788/211549848-cab11583-8072-4d57-89e8-7b041a4520dc.gif" Width="50%" Height="50%"/>
 3. Ingame change your gold by dropping or gaining gold and search for "Changed Value". Since we do not know how the encryption works we can't search for "increased" or "decreased value". This will filter out all values which haven't change. 
 <img src="https://user-images.githubusercontent.com/108685788/211550929-5e3ae24f-2563-4349-a5b0-9a7ff6f572a0.gif" Width="50%" Height="50%"/>
@@ -45,5 +45,4 @@ Keep repeating steps 3 & 4 until you are left with only a few addresses.
 In my case I'm left with four addresses which are all 4 bytes apart. This could lead to the assumption that we found a structure which contains the encrypted gold value and some additional information used to decrypt it.
 
 # Pratical - Finding Decrypted gold value
-As explained above the next step is to find out where the decrypted value is written to the memory address we found. To do this, right click the memory address and "find out what writes to this address".
-
+As explained above the next step is to find out where the decrypted value is written to the memory address we found. To do this, right click the memory address and "find out what writes to this address". By doing this a window will pop up which keeps track at which location the content of our address is modified. 
