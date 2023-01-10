@@ -42,7 +42,7 @@ By tracing back the stack we can find out which function called the encryption f
 <img src="https://user-images.githubusercontent.com/108685788/211549848-cab11583-8072-4d57-89e8-7b041a4520dc.gif" Width="50%" Height="50%"/>
 3. In game change your gold by dropping or gaining gold and search for "Changed Value". Since we do not know how the encryption works we can't search for "increased" or "decreased value". This will filter out all values which haven't changed. 
 <img src="https://user-images.githubusercontent.com/108685788/211550929-5e3ae24f-2563-4349-a5b0-9a7ff6f572a0.gif" Width="50%" Height="50%"/>
-4. Trigger different game functions like attacking, moving without changing your gold. Search for "Unchanged Value". This will filter out all values which have been changed. It is a good idea to trigger as many in game functions as possible to trigger a change to uninteresting values.
+4. Use different game functions like attacking, moving without changing your gold. Search for "Unchanged Value". This will filter out all values which have been changed. It is a good idea to use as many in game functions as possible to trigger a change to uninteresting values.
 <img src="https://user-images.githubusercontent.com/108685788/211551713-dc4b87f9-28fc-4b43-82c5-27665402d760.gif" Width="50%" Height="50%"/>
 Keep repeating steps 3 & 4 until you are left with only a few addresses.
 <img width="315" alt="Values_Left" src="https://user-images.githubusercontent.com/108685788/211553392-c9f34a26-7eb4-4f73-971d-e6c5e1e49022.png">
