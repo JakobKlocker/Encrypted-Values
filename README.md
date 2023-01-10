@@ -56,3 +56,6 @@ Looking at the encryption function we see that it creates a random value, stores
 <img width="423" alt="encrpytionFucntionNamed" src="https://user-images.githubusercontent.com/108685788/211568552-a426edb6-9c2b-4aee-a91a-c8784b9e9e4b.png"><br>
 
 # Pratical - Finding Decrypted gold value
+Moving back to Cheat Engine, we still have the window open which tells us what instruction writes to our encrypted gold value. If you double click the instruction a window will pop up, at the bottom it will show what the registers held at the time the instruction was executed. 
+<img src="https://user-images.githubusercontent.com/108685788/211572675-b3785c00-1e60-492c-b9cb-3994c2dc311a.gif" Width="50%" Height="50%"/><br>
+As explained above the encryption function is called by 1123 other places, meaning we can't simply set a breakpoint. What we'll have to do is set a conditional breakpoint. Since we know that the instruction which writes our address is "mov [edi], esi" we know that edi must hold our memory address we found. Looking at the registers, we see that EDI equals 559A9131, which is our memory address. 
