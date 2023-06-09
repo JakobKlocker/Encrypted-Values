@@ -1,4 +1,4 @@
-# Finding &amp; Hooking Encrypted Values
+# Finding Encrypted Values
 In this post I will explain/guide you how to find encrypted values in games.
 
 # Intro
